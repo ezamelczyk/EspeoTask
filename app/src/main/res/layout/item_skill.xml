@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v7.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    app:contentPadding="16dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical">
+
+        <TextView
+            android:id="@+id/skillName"
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:textSize="20sp"
+            android:textColor="@color/primaryTextColor"
+            android:layout_marginEnd="16dp"
+            android:layout_marginRight="16dp"
+            tools:text="Java"
+            />
+
+        <me.ernestzamelczyk.espeotask.ui.utils.SkillLevelView
+            android:id="@+id/skillLevel"
+            android:layout_width="match_parent"
+            android:layout_height="25dp"
+            app:currentLevel="5"
+            app:maxLevel="10"
+            app:activeColor="@color/secondaryLightColor"
+            app:inactiveColor="@color/primaryColor"
+            app:itemsMargin="5dp"/>
+
+    </LinearLayout>
+
+</android.support.v7.widget.CardView>

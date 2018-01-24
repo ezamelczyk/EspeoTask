@@ -1,0 +1,28 @@
+<resources>
+
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.AppCompat.Light.NoActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/primaryColor</item>
+        <item name="colorPrimaryDark">@color/primaryDarkColor</item>
+        <item name="colorAccent">@color/accentColor</item>
+        <item name="android:textColorPrimary">@color/primaryTextColor</item>
+        <item name="android:textColorSecondary">@color/secondaryTextColor</item>
+    </style>
+
+    <style name="AppTheme.PhoneButton" parent="Widget.AppCompat.Button.Colored">
+        <item name="colorButtonNormal">@color/secondaryLightColor</item>
+        <item name="android:textColor">@color/secondaryTextColor</item>
+    </style>
+
+    <style name="AppTheme.MapButton" parent="Widget.AppCompat.Button.Colored">
+        <item name="colorButtonNormal">@color/accentColor</item>
+        <item name="android:textColor">@color/secondaryTextColor</item>
+    </style>
+
+    <style name="RatingBar" parent="Theme.AppCompat">
+        <item name="colorControlNormal">@color/secondaryColor</item>
+        <item name="colorControlActivated">@color/accentColor</item>
+    </style>
+
+</resources>

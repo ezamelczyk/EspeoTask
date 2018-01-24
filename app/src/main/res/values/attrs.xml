@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="CollapsingCardViewBehavior">
+        <attr name="targetView" format="reference"/>
+        <attr name="elevationTarget" format="reference"/>
+    </declare-styleable>
+
+    <declare-styleable name="SkillLevelView">
+        <attr name="currentLevel" format="integer"/>
+        <attr name="maxLevel" format="integer"/>
+        <attr name="activeColor" format="color"/>
+        <attr name="inactiveColor" format="color"/>
+        <attr name="itemsMargin" format="dimension"/>
+    </declare-styleable>
+</resources>

@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="tabLayoutHeight">48dp</dimen>
+    <dimen name="profilePictureSize">150dp</dimen>
+    <dimen name="listMargin">16dp</dimen>
+</resources>

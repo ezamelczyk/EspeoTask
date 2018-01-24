@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="me.ernestzamelczyk.espeotask.ui.main.MainActivity">
+
+    <android.support.design.widget.AppBarLayout
+        android:id="@+id/appBar"
+        android:background="@android:color/transparent"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:elevation="0dp">
+
+        <android.support.design.widget.CollapsingToolbarLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:layout_scrollFlags="scroll|exitUntilCollapsed|snap">
+
+            <View
+                android:id="@+id/backgroundView"
+                android:layout_width="match_parent"
+                android:layout_height="196dp"
+                android:background="?attr/colorPrimary"/>
+
+            <android.support.v7.widget.Toolbar
+                android:id="@+id/toolbar"
+                android:layout_width="match_parent"
+                android:layout_height="?attr/actionBarSize"
+                android:background="?attr/colorPrimary"
+                android:layout_marginBottom="@dimen/tabLayoutHeight"
+                app:layout_collapseMode="pin" />
+
+            <Space
+                android:id="@+id/targetTabLayout"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/tabLayoutHeight"
+                android:layout_marginTop="?attr/actionBarSize"
+                />
+
+        </android.support.design.widget.CollapsingToolbarLayout>
+
+    </android.support.design.widget.AppBarLayout>
+
+    <android.support.v7.widget.CardView
+        android:id="@+id/cardView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="32dp"
+        android:layout_marginRight="32dp"
+        android:layout_marginTop="32dp"
+        app:layout_behavior="me.ernestzamelczyk.espeotask.ui.utils.CollapsingCardViewBehavior"
+        app:targetView="@id/targetTabLayout"
+        app:elevationTarget="@id/appBar">
+
+        <android.support.constraint.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="top">
+
+            <ImageView
+                android:id="@+id/profilePicture"
+                android:layout_width="@dimen/profilePictureSize"
+                android:layout_height="@dimen/profilePictureSize"
+                android:contentDescription="@string/profile_picture"
+                android:padding="16dp"
+                app:layout_constraintBottom_toTopOf="@id/name"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                tools:src="@drawable/profile"
+                />
+
+            <TextView
+                android:id="@+id/name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/name"
+                android:textSize="25sp"
+                app:layout_constraintBottom_toTopOf="@id/profession"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"/>
+
+            <TextView
+                android:id="@+id/profession"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/profession"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintBottom_toTopOf="@id/phoneButton"/>
+
+            <Button
+                android:id="@+id/phoneButton"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="@string/call_me"
+                android:drawableLeft="@drawable/ic_phone"
+                android:drawableStart="@drawable/ic_phone"
+                android:layout_marginLeft="16dp"
+                android:layout_marginStart="16dp"
+                android:theme="@style/AppTheme.PhoneButton"
+                app:layout_constraintEnd_toStartOf="@id/mapButton"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintBottom_toTopOf="@id/tabLayout"/>
+
+            <Button
+                android:id="@+id/mapButton"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:text="@string/espeo"
+                android:drawableRight="@drawable/ic_directions"
+                android:drawableEnd="@drawable/ic_directions"
+                android:layout_marginRight="16dp"
+                android:layout_marginEnd="16dp"
+                android:layout_marginStart="8dp"
+                android:layout_marginLeft="8dp"
+                android:theme="@style/AppTheme.MapButton"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@id/phoneButton"
+                app:layout_constraintBottom_toBottomOf="@id/phoneButton"
+                app:layout_constraintTop_toTopOf="@id/phoneButton"/>
+
+            <android.support.design.widget.TabLayout
+                android:id="@+id/tabLayout"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/tabLayoutHeight"
+                android:background="@color/primaryLightColor"
+                app:tabMode="fixed"
+                app:tabGravity="fill"
+                app:tabTextColor="@color/primaryTextColorLight"
+                app:tabSelectedTextColor="@color/primaryTextColor"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent" />
+
+        </android.support.constraint.ConstraintLayout>
+
+    </android.support.v7.widget.CardView>
+
+    <android.support.v4.view.ViewPager
+        android:id="@+id/viewPager"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior" />
+
+</android.support.design.widget.CoordinatorLayout>

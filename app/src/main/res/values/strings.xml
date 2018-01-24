@@ -1,0 +1,14 @@
+<resources>
+    <string name="app_name">Espeo Task</string>
+    <string name="name">Ernest Zamelczyk</string>
+    <string name="profession">Android Developer</string>
+    <string name="profile_picture">Profile picture</string>
+    <string name="call_me">Call me</string>
+    <string name="espeo">Espeo</string>
+    <string name="company_logo">Company logo</string>
+    <string name="dash">-</string>
+    <string name="app_image">App image</string>
+    <string name="school_logo">School logo</string>
+    <string name="play_button">Play button</string>
+    <string name="distance">Distance</string>
+</resources>
