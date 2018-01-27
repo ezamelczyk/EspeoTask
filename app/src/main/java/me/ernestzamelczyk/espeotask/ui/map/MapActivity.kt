@@ -94,7 +94,7 @@ class MapActivity: AppCompatActivity(), OnMapReadyCallback {
         val espeoPosition = viewModel.espeoPosition.value
         if(location != null && espeoPosition != null) {
             if(polylineOptions == null) {
-                viewModel.getGoogleDirections(resources.getString(R.string.google_directions_key), LatLng(location.latitude, location.longitude), espeoPosition.latLng()).observe(this, Observer {
+                viewModel.getGoogleDirections(resources.getString(R.string.google_services_key), LatLng(location.latitude, location.longitude), espeoPosition.latLng()).observe(this, Observer {
                     if(it != null) {
                         polylineOptions = it
                         googleMap?.let {
