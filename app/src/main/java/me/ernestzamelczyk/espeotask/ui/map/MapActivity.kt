@@ -74,9 +74,6 @@ class MapActivity: AppCompatActivity(), OnMapReadyCallback {
             }
 
         })
-
-        // observe our position
-        viewModel.locationLiveData.observe(this, Observer { onLocationChanged(it) })
     }
 
     /**
@@ -118,6 +115,8 @@ class MapActivity: AppCompatActivity(), OnMapReadyCallback {
         when {
             ContextCompat.checkSelfPermission(this, Manifest.permission.ACCESS_FINE_LOCATION) == PackageManager.PERMISSION_GRANTED -> {
                 googleMap?.isMyLocationEnabled = true
+                // observe our position
+                viewModel.locationLiveData.observe(this, Observer { onLocationChanged(it) })
             }
             ActivityCompat.shouldShowRequestPermissionRationale(this,
                     Manifest.permission.ACCESS_FINE_LOCATION) -> showRequestLocationPermissionDialog()

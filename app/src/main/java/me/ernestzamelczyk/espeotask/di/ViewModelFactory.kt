@@ -1,4 +1,4 @@
-package me.ernestzamelczyk.espeotask.di.viewmodel
+package me.ernestzamelczyk.espeotask.di
 
 import android.arch.lifecycle.ViewModel
 import android.arch.lifecycle.ViewModelProvider

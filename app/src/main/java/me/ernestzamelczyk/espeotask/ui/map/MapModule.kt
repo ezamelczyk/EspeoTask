@@ -1,10 +1,9 @@
 package me.ernestzamelczyk.espeotask.ui.map
 
 import android.arch.lifecycle.ViewModelProviders
-import dagger.Binds
 import dagger.Module
 import dagger.Provides
-import me.ernestzamelczyk.espeotask.di.viewmodel.ViewModelFactory
+import me.ernestzamelczyk.espeotask.di.ViewModelFactory
 
 @Module
 abstract class MapModule {
